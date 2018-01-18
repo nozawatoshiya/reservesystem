@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
       $email = \Session::get('email');
 
-      $result = Reserved::where('メールアドレス',$email)->orderBy('日付','desc')->orderBy('時間','desc')->paginate(10);
+      $result = Reserved::where('メールアドレス',$email)->orderBy('日付','desc')->orderBy('時間','desc')->paginate(20);
       $count = Reserved::where('メールアドレス',$email)->count();
 
 //dd($result);
